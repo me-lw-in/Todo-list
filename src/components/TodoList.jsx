@@ -69,7 +69,7 @@ const TodoList = ({ todoList, settodos, todos }) => {
       ) : (
         <p
           style={{
-            textDecoration: todoList.isCompleted ? "line-through" : "none",
+            textDecoration: todoList.isCompleted ? "line-through" : "none", overflowX:"hidden"
           }}
         >
           {todoList.text}
@@ -106,6 +106,3 @@ const TodoList = ({ todoList, settodos, todos }) => {
 
 export default TodoList;
 
-//saving work is pending
-//on blur
-//padding adjustmemnts

@@ -71,6 +71,7 @@ button:hover{
 
 .sub-container:hover::-webkit-scrollbar {
     width: 8px; /* Show scrollbar on hover */
+    
 }
 
 .sub-container::-webkit-scrollbar-track {
@@ -116,3 +117,17 @@ button:hover{
     }
 }
 
+@media (max-width: 600px){
+    .main-container {
+        height: 60%;
+        width: 100vw;
+      }
+
+      .list-container{
+        margin-bottom: 30px;    
+    }
+    .sub-container:hover::-webkit-scrollbar {
+        width: 2px; /* Show scrollbar on hover */    
+    }
+      
+}
