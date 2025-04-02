@@ -5,7 +5,16 @@ import { v4 as uuidv4 } from "uuid";
 
 function App() {
   const [task, setTask] = useState("");
-  const [todos, settodos] = useState([]);
+  const [todos, settodos] = useState(() => {
+    // Load todos from localStorage on initial render, or use empty array if none
+    const savedTodos = localStorage.getItem("todos");
+    return savedTodos ? JSON.parse(savedTodos) : [];
+  });
+
+  // Save todos to localStorage whenever they change
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   const handleChange = (e) => {
     setTask(e.target.value);
@@ -13,7 +22,7 @@ function App() {
 
   const handleAdd = (e) => {
     if (task.trim() !== "") {
-      settodos([...todos, { id: Date.now(), text: task, isCompleted: false }]);
+      settodos([...todos, { id: uuidv4(), text: task, isCompleted: false }]);
       setTask("");
     }
   };

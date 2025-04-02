@@ -65,11 +65,12 @@ const TodoList = ({ todoList, settodos, todos }) => {
           onBlur={handleSaveEditOnClick}
           onKeyDown={handleSaveEditOnEnter}
           autoFocus
-        ></input>
+        />
       ) : (
         <p
           style={{
-            textDecoration: todoList.isCompleted ? "line-through" : "none", overflowX:"hidden"
+            textDecoration: todoList.isCompleted ? "line-through" : "none",
+            overflowX: "hidden",
           }}
         >
           {todoList.text}
@@ -105,4 +106,3 @@ const TodoList = ({ todoList, settodos, todos }) => {
 };
 
 export default TodoList;
-

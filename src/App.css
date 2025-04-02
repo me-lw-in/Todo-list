@@ -1,133 +1,127 @@
 .main-container {
   height: 500px;
-  
+
   width: 500px;
   background-color: white;
   border-radius: 20px;
-  
 }
 
-.heading{
-    padding: 20px;
-    padding-top: 30px;
-    text-align: center;
-    
+.heading {
+  padding: 20px;
+  padding-top: 30px;
+  text-align: center;
 }
-.heading>h2{
-    margin: 0;
+.heading > h2 {
+  margin: 0;
 }
 
 .material-symbols-outlined {
-    font-size: 24px; /* Adjust size */
-    vertical-align: middle;
-    color: white;
+  font-size: 24px; /* Adjust size */
+  vertical-align: middle;
+  color: white;
 }
 
-.input-field{
-    height: max-content;
-    display: flex;
-    justify-content: center;
-    gap: 5px;;
+.input-field {
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
 }
 
-input{
-    /* height: 2px; */
-    width: 70%;
-    border-radius: 8px;
-    border: 1px solid rgba(0, 0, 0, 0.386);
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 10px;
-    padding-right: 10px;
+input {
+  /* height: 2px; */
+  width: 70%;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.386);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-button{
-    width: 10%;
-    background-color: #8c4ceb;
-    border: none;
-    border-radius: 8px;
+button {
+  width: 10%;
+  background-color: #8c4ceb;
+  border: none;
+  border-radius: 8px;
 }
 
-button:hover{
-    cursor: pointer;
+button:hover {
+  cursor: pointer;
 }
-  
-.list-container{
-    height: 347px;
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    overflow-y: auto;
-   
+
+.list-container {
+  height: 347px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  overflow-y: auto;
 }
 
 /* For WebKit browsers (Chrome, Edge, Safari) */
 .sub-container::-webkit-scrollbar {
-    width: 0; /* Hide scrollbar by default */
+  width: 0; /* Hide scrollbar by default */
 }
 
 .sub-container:hover::-webkit-scrollbar {
-    width: 8px; /* Show scrollbar on hover */
-    
+  width: 8px; /* Show scrollbar on hover */
 }
 
 .sub-container::-webkit-scrollbar-track {
-    background: #ffffff;
-    border-radius: 10px;
+  background: #ffffff;
+  border-radius: 10px;
 }
 
 .sub-container::-webkit-scrollbar-thumb {
-    background: #8c4ceb;
-    border-radius: 10px;
+  background: #8c4ceb;
+  border-radius: 10px;
 }
 
 .sub-container::-webkit-scrollbar-thumb:hover {
-    background: #6a34c9;
+  background: #6a34c9;
 }
 
 /* For Firefox */
 .sub-container {
-    scrollbar-color: transparent transparent; /* Hide scrollbar by default */
-    scrollbar-width: thin;
+  scrollbar-color: transparent transparent; /* Hide scrollbar by default */
+  scrollbar-width: thin;
 }
 
 .sub-container:hover {
-    scrollbar-color: #8c4ceb #ffffff; /* Show scrollbar on hover */
+  scrollbar-color: #8c4ceb #ffffff; /* Show scrollbar on hover */
 }
 
-.bounce-animation{
-    /* animation: bounce 1s ease-in 0s infinite alternate-reverse; */
-    animation-name: bounce;
-    animation-duration: 0.5s;
-    animation-iteration-count:infinite;
-    animation-timing-function: ease-out;
-    animation-delay: 0s;
-    animation-direction: alternate-reverse;
+.bounce-animation {
+  /* animation: bounce 1s ease-in 0s infinite alternate-reverse; */
+  animation-name: bounce;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-direction: alternate-reverse;
 }
 
 @keyframes bounce {
-    from{
-
-    }
-    to{
-        transform: translateY(-8px);
-    }
+  from {
+  }
+  to {
+    transform: translateY(-8px);
+  }
 }
 
-@media (max-width: 600px){
-    .main-container {
-        height: 60%;
-        width: 100vw;
-      }
+@media (max-width: 600px) {
+  .main-container {
+    height: 60%;
+    width: 100vw;
+  }
 
-      .list-container{
-        margin-bottom: 30px;    
-    }
-    .sub-container:hover::-webkit-scrollbar {
-        width: 2px; /* Show scrollbar on hover */    
-    }
-      
+  .list-container {
+    margin-bottom: 30px;
+  }
+  .sub-container:hover::-webkit-scrollbar {
+    width: 2px; /* Show scrollbar on hover */
+  }
 }

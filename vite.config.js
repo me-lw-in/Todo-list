@@ -8,28 +8,40 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: "autoUpdate",
+      devOptions: {
+        enabled: true, // Enable PWA features in dev mode for testing
+      },
+      workbox: {
+        // Cache these file types for offline use
+        globPatterns: ["**/*.{js,css,html,png,svg,ico}"],
+      },
       manifest: {
         name: "Todo List",
-        short_name: "Todo List",
-        description: "Make you own list",
-        theme_color: "#ffffff",
+        short_name: "Todos",
+        description: "A simple todo list app to manage your tasks",
+        theme_color: "#ffffff", // Match your app's purple theme
         background_color: "#ffffff",
         display: "standalone",
+        start_url: "/",
         icons: [
           {
-            src: "/web-app-manifest-192x192.png",
+            src: "public/web-app-manifest-192x192.png",
             sizes: "192x192",
             type: "image/png",
-            purpose: "maskable",
+            // purpose: "any maskable",
           },
           {
-            src: "/web-app-manifest-512x512.png",
+            src: "public/web-app-manifest-512x512.png",
             sizes: "512x512",
             type: "image/png",
-            purpose: "maskable",
+            // purpose: "any maskable",
           },
         ],
       },
     }),
   ],
+  server: {
+    host: "0.0.0.0", // Allow access from any network device
+    port: 5173, // Default port (optional)
+  },
 });
